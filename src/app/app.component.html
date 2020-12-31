@@ -1,18 +1,11 @@
-<form>
 
-	<label for="name" class="form-label">Full Name</label>
-	<input class="form-control form-control-sm" type="text" name="name" id="name" placeholder="Enter Name">
-
-	<label for="email" class="form-label">Email</label>
-	<input type="text" class="form-control" name="email" id="email"email placeholder="Enter Email">
-
-	<label for="pwd" class="form-label">Password</label>
-	<input type="password" class="form-control" name="pwd" id="pwd" placeholder="Enter Password">
-
-	<br>
-	<input type="submit" value="Register" id="submit" class="btn btn-success">
-
-{{hello()}}
-
-
-</form>
+<select>
+  <option *ngFor = "let i of arr">{{i}} </option>
+</select>
+<div>
+	<p *ngIf="loginFlag; else demo1">You have successfully logged in </p>
+	<ng-template #demo1> You are not logged in </ng-template>
+</div>
+<h2>{{title}}</h2>
+<input type="text" id="txt" (change)="bye()" />
+<button id="btn" class="btn btn-success" (click)="hello()">Okay</button>
